@@ -1,0 +1,148 @@
+	
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>head</title>
+		<style>
+			/* Add your custom CSS styles here */
+
+/* Styling for the "Our Service" section */
+#service {
+  background-color: #f8f8f8;
+  padding: 60px 0;
+}
+
+.page-title {
+  margin-bottom: 50px;
+}
+
+.page-title h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
+}
+
+.page-title p {
+  font-size: 18px;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.pg-titl-bdr-btm {
+  border-color: #e91e63;
+  border-width: 2px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.col-md-4 {
+  text-align: center;
+}
+
+.service-box {
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #e91e63, #9c27b0);
+  opacity: 0.9;
+  z-index: -1;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  font-size: 60px;
+  color: #fff;
+  background-color: #e91e63;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.service-box:hover .service-icon {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.service-text h3 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin: 20px 0;
+}
+
+.service-text p {
+  font-size: 16px;
+  color: #777;
+}
+
+
+		</style>
+	</head>
+	<body>
+	
+	<div id="service" class="section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="page-title text-center">
+					<center><h1>Our Service</h1></center>
+					<p style="margin-right:215px">A ticket based support system which is similar to "support" dashboard</p>
+					<hr class="pg-titl-bdr-btm"></hr>
+				</div>
+				<div class="col-md-4" >
+					<div class="service-box">
+						<div class="service-icon"><i class="fa fa-picture-o"></i></div>
+						<div class="service-text">
+							<h3>Ticket</h3>
+							<p> Raise a ticket for an issue and get it solved</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="service-box">
+						<div class="service-icon"><i class="fa fa fa-code"></i></div>
+						<div class="service-text">
+							<h3>Solution</h3>
+							<p> Get the solutions from the Admin Panel</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="service-box">
+						<div class="service-icon"><i class="fa fa-diamond"></i></div>
+						<div class="service-text">
+							<h3>Close</h3>
+							<p> On getting solution for the rasied ticket, it can be close :)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</body>
+	</html><!--SERVICE START-->
+	
+	<!--SERVICE END-->

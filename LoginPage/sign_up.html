@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login From</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+
+  <div class="container">
+        <input type="checkbox" id="toggle">
+    </div>
+    <form id="loginForm" action="/login" method="POST">
+    <div class="login_form_container">
+      <div class="login_form" style="margin-top: -25px;">
+        <h2>Sign Up</h2>
+        <div class="input_group">
+          <i class="fa fa-user"></i>
+          <input
+            type="text"
+            placeholder="Username"
+            class="input_text"
+            autocomplete="off" id="usrname"
+          />
+        </div>
+        <div class="input_group">
+          <i class="fa fa-unlock-alt"></i>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="input_text"
+            autocomplete="off" id="email"
+          />
+        </div>
+        <div class="input_group">
+          <i class="fa fa-unlock-alt"></i>
+          <input
+            type="password"
+            placeholder="Password"
+            class="input_text"
+            autocomplete="off" id="password"
+          />
+        </div>
+        <div class="input_group">
+          <i class="fa fa-unlock-alt"></i>
+          <input
+            type="password"
+            placeholder=" Confirm Password"
+            class="input_text"
+            autocomplete="off" id="confpassword"
+          />
+        </div>
+        <div class="button_group" id="login_button">
+          <a onclick="Submit()">Submit</a>
+        </div>
+        <div class="fotter">
+          <a>Already have an account</a>
+          <a href="file:///C:/Users/Amit/Desktop/Ticket%20Task/app/LoginPage/login.html" style="color:#00ccff">Login</a>
+        </div>
+      </div>
+    </div>
+</form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="login.js"></script>
+    <script src="server.js"></script>
+    <script>
+      
+var detailsArray = [];
+
+
+// code for registration of users
+function register(){
+
+    let newUserPassword = document.getElementById('password').value;
+    let newUserPassword = document.getElementById('confpassword').value;
+    let newUserEmail = document.getElementById("email").value;
+    let newUserName = document.getElementById("usrname").value;
+    let userDetails = {
+        fullname: newFullName,
+        username: newUserName,
+        useremail: newUserEmail,
+        userpassword: newUserPassword
+        userpassword: newUserPassword
+    };
+    for(let i = 0; i< detailsArray.length; i++) {
+        if (detailsArray[i].username === newUserName) {
+            document.getElementById("alert").innerText = "Username already exists!!";
+            return;
+        }
+
+    }
+            detailsArray.push(userDetails);
+            localStorage.userRecord = JSON.stringify(detailsArray);
+
+
+    document.getElementById('loginForm').reset();
+    window.location = "tickets.html";
+
+}
+
+function init() {
+    if(localStorage.userRecord) {
+        detailsArray = JSON.parse(localStorage.userRecord);
+        /**for(let i = 0; i< detailsArray.length; i++){
+            let fullName = detailsArray[i].fullname;
+            let userName = detailsArray[i].username;
+            let userEmail = detailsArray[i].useremail;
+            let userPassword = detailsArray[i].userpassword;
+        }**/
+    }
+}
+
+
+/**function login(){
+
+    let loginUserName = document.getElementById('usrLogin').value;
+    let loginPassword = document.getElementById('pwdLogin').value;
+
+    for (let i = 0; i < detailsArray.length; i++) {
+
+        if(detailsArray[i].username === loginUserName && detailsArray[i].userpassword === loginPassword){
+            localStorage.setItem('curUser', detailsArray[i].fullname);
+            window.location = "tickets.html";
+           }else{
+            document.getElementById("loginAlert").innerHTML = "Error!! Try again";
+            document.getElementById('loginForm').reset();
+
+        }
+    }
+
+
+}**/
+
+
+/**function welcome(){
+
+    let display = localStorage.getItem('curUser').toUpperCase();
+       let welcomeText = document.getElementById("headerTicket");
+       welcomeText.style.fontSize = '25px';
+       welcomeText.style.color='olive';
+       welcomeText.class="text-primary";
+       welcomeText.innerHTML ="Logged In:    "+ display
+}**/
+
+
+
+    </script>
+  </body>
+</html>

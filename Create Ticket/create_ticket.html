@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        /* Add your global styles here if needed */
+
+/* Style for the main row */
+.row {
+  margin-top: 20px;
+}
+
+/* Style for the left column */
+.col-8 {
+  padding: 10px;
+}
+
+/* Style for the right column */
+.col-4 {
+  padding: 10px;
+}
+
+/* Style for the card header */
+.card-header {
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #007bff;
+  border-radius: 4px 4px 0 0;
+}
+
+/* Style for the card body */
+.card-body {
+  padding: 20px;
+  border: 1px solid #ced4da;
+  border-radius: 0 0 4px 4px;
+}
+
+/* Style for the table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Style for the table headers */
+.table th {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 12px;
+}
+
+/* Style for the table data */
+.table td {
+  text-align: center;
+  padding: 10px;
+}
+
+/* Style for the "Edit" and "Delete" buttons */
+.btn {
+  margin: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-success:hover,
+.btn-danger:hover {
+  opacity: 0.8;
+}
+
+/* Style for the form label and input fields */
+label {
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px 16px;
+  margin-bottom: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
+/* Style for the "Save" and "Update" buttons in the form */
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Optional: If you want to style the form row more nicely */
+.card-body .row {
+  margin-bottom: 16px;
+}
+
+/* Optional: If you want to style the form reset button */
+.btn-secondary:focus {
+  box-shadow: none;
+}
+
+    </style>
+</head>
+<div class="row">
+    <div class="col-8">
+        <div class="card">
+            <div class="card-header bg-primary">
+                Booking List
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Sr No</th>
+                            <th>Booking Name</th>
+                            <th>City</th>
+                            <th>Contact No</th>
+                            <th>Gst No</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let dealer of dealersArray;let sr =index">
+                            <td><input type="number" name="number"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td>
+                                <button class="btn btn-sm btn-success" (click)="onEdit(dealer)">Edit</button>
+                                <button class="btn btn-sm btn-danger" (click)="deleteDealer(dealer.dealerId)">Delete</button>
+                            </td>
+                        </tr>
+                         <tr *ngFor="let dealer of dealersArray;let sr =index">
+                            <td><input type="number" name="number"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                        </tr>
+
+                        <tr *ngFor="let dealer of dealersArray;let sr =index">
+                            <td><input type="number" name="number"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                        </tr>
+
+                        <tr *ngFor="let dealer of dealersArray;let sr =index">
+                            <td><input type="number" name="number"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                        </tr>
+
+                        <tr *ngFor="let dealer of dealersArray;let sr =index">
+                            <td><input type="number" name="number"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                        </tr>
+
+                        <tr *ngFor="let dealer of dealersArray;let sr =index">
+                            <td><input type="number" name="number"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                        </tr>
+
+                        <tr *ngFor="let dealer of dealersArray;let sr =index">
+                            <td><input type="number" name="number"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                        </tr>
+
+                        <tr *ngFor="let dealer of dealersArray;let sr =index">
+                            <td><input type="number" name="number"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                        </tr>
+
+                        <tr *ngFor="let dealer of dealersArray;let sr =index">
+                            <td><input type="number" name="number"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                        </tr>
+
+                        <tr *ngFor="let dealer of dealersArray;let sr =index">
+                            <td><input type="number" name="number"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                        </tr>
+
+                        <tr *ngFor="let dealer of dealersArray;let sr =index">
+                            <td><input type="number" name="number"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                        </tr>
+                        <tr *ngFor="let dealer of dealersArray;let sr =index">
+                            <td><input type="number" name="number"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                            <td><input type="text" name="text"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card">
+            <div class="card-header bg-primary">
+                Create Form
+            </div>
+            <div class="card-body"> 
+                <form >
+                    <div class="row">
+                        <div class="col-6">
+                            <label for=""> Name</label><br>
+                            <input type="text" name="dealerName" class="form-control" [(ngModel)]="dealerObj.dealerName" placeholder="Name" style="width:98%;">
+                        </div>
+                        <div class="col-6">
+                            <label for=""> Contact No</label>
+                            <input type="text" name="contactNo" class="form-control" [(ngModel)]="dealerObj.contactNo" placeholder="Contact" style="width:98%;">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="">Alt Contact</label>
+                            <input type="text" name="altContactNo" class="form-control" [(ngModel)]="dealerObj.altContactNo" placeholder="Alt Contact" style="width:98%;">
+                        </div>
+                        <div class="col-6">
+                            <label for="">Gst No</label>
+                            <input type="text" name="gstNo" class="form-control" [(ngModel)]="dealerObj.gstNo" placeholder="Gst" style="width:98%;">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="">Bank Name</label>
+                            <input type="text" name="bankName" class="form-control" [(ngModel)]="dealerObj.bankName" placeholder="Bank" style="width:98%;">
+                        </div>
+                        <div class="col-6">
+                            <label for="">Acc No</label>
+                            <input type="text" name="bankAccNo" class="form-control" [(ngModel)]="dealerObj.bankAccNo" placeholder="Acc No" style="width:98%;">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="">IFSC</label>
+                            <input type="text" name="ifsc" class="form-control" [(ngModel)]="dealerObj.ifsc" placeholder="IFSC" style="width:98%;">
+                        </div>
+                        <div class="col-6">
+                            <label for="">Branch</label>
+                            <input type="text" name="branch" class="form-control" [(ngModel)]="dealerObj.branch" placeholder="Branch" style="width:98%;">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="">City</label>
+                            <input type="text"  name="city" placeholder="City" [(ngModel)]="dealerObj.city" class="form-control" style="width:98%;">
+                        </div>
+                        <div class="col-6">
+                            <label for="">Address</label>
+                            <textarea name="address"  class="form-control" [(ngModel)]="dealerObj.address" placeholder="Address" rows="2" style="width:98%;"></textarea>
+                        </div>
+                    </div>
+                    <div class="row text-center pt-2">
+                        <div class="col-6 ">
+                           <button class="btn btn-sm btn-secondary">Reset</button>
+                        </div>
+                        <center>
+                        <div class="col-6"> 
+                            <button class="btn btn-sm btn-success" *ngIf="dealerObj.dealerId == 0" (click)="saveDealer()">Save </button>
+                            <button class="btn btn-sm btn-success"  *ngIf="dealerObj.dealerId !== 0" (click)="updateDealer()">Update </button>
+                        </div>
+                    </center>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</html>
